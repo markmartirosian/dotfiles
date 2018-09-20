@@ -6,6 +6,7 @@
 [user]
         name = l5x
         email = 189198+l5x@users.noreply.github.com
+        signingkey = 0x0DB1B2FEE81674CB
 
 [push]
         default = simple
@@ -82,4 +83,4 @@
 [gpg]
         program = gpg2
 [pull]
-	rebase = true
+        rebase = true
