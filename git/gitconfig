@@ -2,6 +2,7 @@
         excludesfile = ~/dotfiles/git/gitignore
         attributesfile = ~/dotfiles/git/gitattributes
         pager = diff-highlight | less -r
+        ignorecase = false
 
 [user]
         name = l5x
