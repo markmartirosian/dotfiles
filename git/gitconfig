@@ -7,7 +7,7 @@
 [user]
         name = l5x
         email = 189198+l5x@users.noreply.github.com
-        signingkey = 0x0DB1B2FEE81674CB
+        signingkey = 0x8B6DD9F259DEF16A
 
 [push]
         default = simple
