@@ -1,7 +1,7 @@
 [core]
         excludesfile = ~/dotfiles/git/gitignore
         attributesfile = ~/dotfiles/git/gitattributes
-        pager = delta --theme=ansi-light
+        pager = delta --theme=ansi-dark
         ignorecase = false
 
 [interactive]
@@ -11,6 +11,9 @@
         name = l5x
         email = 189198+l5x@users.noreply.github.com
         signingkey = 0x8B6DD9F259DEF16A
+
+[init]
+        templateDir = ~/dotfiles/git/template/
 
 [push]
         default = simple
@@ -55,23 +58,13 @@
         pushInsteadOf = "https://gist.github.com/"
 
 [alias]
-        c = commit -a -s
-        p = push
-        l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-        s = status -sb
         t = grep -iEI "TODO|FIXME"
         co = checkout
-        ec = config --global -e
-        up = !git pull --rebase --prune $@ && git submodule update --init --recursive
-        ow = !git fetch --all && git reset --hard origin/master && git submodule update --init
         who = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
         wip = !git add -u && git commit --no-verify -m "WIP"
         save = !git add -A && git commit  --no-verify -m 'SAVEPOINT'
         undo = reset HEAD~1 --mixed
-        wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
         amend = commit -a --amend
-        serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
-        sclone = clone --depth=1
 
 [gpg]
         program = gpg2
