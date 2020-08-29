@@ -1,11 +1,11 @@
 [core]
         excludesfile = ~/dotfiles/git/gitignore
         attributesfile = ~/dotfiles/git/gitattributes
-        pager = delta --theme=ansi-dark
+        pager = delta --theme=ansi-light
         ignorecase = false
 
 [interactive]
-        diffFilter = delta  --theme=ansi-light --color-only
+        diffFilter = delta --theme=ansi-light --color-only
 
 [user]
         name = l5x
