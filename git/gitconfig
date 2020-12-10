@@ -23,23 +23,7 @@
         helper = cache --timeout=36000
 
 [color]
-        ui = always
-
-[color "branch"]
-        current = yellow reverse
-        local = yellow
-        remote = green
-
-[color "diff"]
-        meta = yellow bold
-        frag = magenta bold
-        old = red bold
-        new = green bold
-
-[color "status"]
-        added = yellow
-        changed = green
-        untracked = cyan
+        ui = never
 
 [status]
         relativePaths = true
