@@ -1,11 +1,30 @@
 [core]
         excludesfile = ~/dotfiles/git/gitignore
         attributesfile = ~/dotfiles/git/gitattributes
-        pager = delta --theme=ansi-light
+        pager = delta
         ignorecase = false
 
 [interactive]
-        diffFilter = delta --theme=ansi-light --color-only
+        diffFilter = delta --color-only
+
+[diff]
+        colorMoved = default
+
+[delta]
+        features = side-by-side unobtrusive-line-numbers decorations
+        whitespace-error-style = 22 reverse
+        syntax-theme = 1337
+        inspect-raw-lines = false
+
+[delta "unobtrusive-line-numbers"]
+        line-numbers = true
+        line-numbers-left-format = "{nm:>4} ┊"
+        line-numbers-right-format = "{np:>4} ┊"
+
+[delta "decorations"]
+        commit-decoration-style = bold yellow ul
+        file-style = bold yellow ul
+        file-decoration-style = none
 
 [user]
         name = l5x
