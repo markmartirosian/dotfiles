@@ -87,11 +87,6 @@
   pushInsteadOf = "git://gist.github.com/"
   pushInsteadOf = "https://gist.github.com/"
 
-[user]
-  email = hello@markmartirosian.com
-  name = Mark Martirosian
-  signingKey = 0x8B6DD9F259DEF16A
-
 [delta]
   features = side-by-side gruvmax
   inspect-raw-lines = false
