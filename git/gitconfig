@@ -27,8 +27,8 @@
         file-decoration-style = none
 
 [user]
-        name = l5x
-        email = 189198+l5x@users.noreply.github.com
+        name = Mark Martirosian
+        email = hello@markmartirosian.com
         signingkey = 0x8B6DD9F259DEF16A
 
 [init]
@@ -74,3 +74,11 @@
 
 [pull]
         rebase = true
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+
+[commit]
+	gpgsign = true
