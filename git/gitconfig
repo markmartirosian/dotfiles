@@ -30,7 +30,6 @@
         name = Mark Martirosian
         email = hello@markmartirosian.com
         signingkey = 0x8B6DD9F259DEF16A
-
 [init]
         templateDir = ~/dotfiles/git/template/
 
@@ -74,11 +73,12 @@
 
 [pull]
         rebase = true
+
 [filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+        required = true
+        clean = git-lfs clean -- %f
 
 [commit]
-	gpgsign = true
+        gpgsign = true
