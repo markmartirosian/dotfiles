@@ -1,84 +1,85 @@
 [core]
-        excludesfile = ~/dotfiles/git/gitignore
-        attributesfile = ~/dotfiles/git/gitattributes
-        pager = delta
-        ignorecase = false
+  excludesfile = ~/dotfiles/git/gitignore
+  attributesfile = ~/dotfiles/git/gitattributes
+  pager = delta
+  ignorecase = false
 
 [interactive]
-        diffFilter = delta --color-only
+  diffFilter = delta --color-only
 
 [diff]
-        colorMoved = default
+  colorMoved = default
 
 [delta]
-        features = side-by-side unobtrusive-line-numbers decorations
-        whitespace-error-style = 22 reverse
-        syntax-theme = 1337
-        inspect-raw-lines = false
+  features = side-by-side unobtrusive-line-numbers decorations
+  whitespace-error-style = 22 reverse
+  syntax-theme = 1337
+  inspect-raw-lines = false
 
 [delta "unobtrusive-line-numbers"]
-        line-numbers = true
-        line-numbers-left-format = "{nm:>4} ┊"
-        line-numbers-right-format = "{np:>4} ┊"
+  line-numbers = true
+  line-numbers-left-format = "{nm:>4} ┊"
+  line-numbers-right-format = "{np:>4} ┊"
 
 [delta "decorations"]
-        commit-decoration-style = bold yellow ul
-        file-style = bold yellow ul
-        file-decoration-style = none
+  commit-decoration-style = bold yellow ul
+  file-style = bold yellow ul
+  file-decoration-style = none
 
 [user]
-        name = Mark Martirosian
-        email = hello@markmartirosian.com
-        signingkey = 0x8B6DD9F259DEF16A
+  name = Mark Martirosian
+  email = hello@markmartirosian.com
+  signingkey = 0x8B6DD9F259DEF16A
 [init]
-        templateDir = ~/dotfiles/git/template/
+  templateDir = ~/dotfiles/git/template/
 
 [push]
-        default = simple
-        followTags = true
+  default = simple
+  followTags = true
 
 [credential]
-        helper = cache --timeout=36000
+  helper = cache --timeout=36000
 
 [color]
-        ui = never
+  ui = never
 
 [status]
-        relativePaths = true
+  relativePaths = true
 
 [url "git@github.com:"]
-        insteadOf = "gh:"
-        insteadOf = "git://github.com"
-        pushInsteadOf = "github:"
-        pushInsteadOf = "git://github.com/"
-        pushInsteadOf = "https://github.com/"
+  insteadOf = "gh:"
+  insteadOf = "git://github.com"
+  pushInsteadOf = "github:"
+  pushInsteadOf = "git://github.com/"
+  pushInsteadOf = "https://github.com/"
 
 [url "git@gist.github.com:"]
-        insteadOf = "gst:"
-        pushInsteadOf = "gist:"
-        pushInsteadOf = "git://gist.github.com/"
-        pushInsteadOf = "https://gist.github.com/"
+  insteadOf = "gst:"
+  pushInsteadOf = "gist:"
+  pushInsteadOf = "git://gist.github.com/"
+  pushInsteadOf = "https://gist.github.com/"
 
 [alias]
-        t = grep -iEI "TODO|FIXME"
-        co = checkout
-        who = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
-        wip = !git add -u && git commit --no-verify -m "WIP"
-        save = !git add -A && git commit  --no-verify -m 'SAVEPOINT'
-        undo = reset HEAD~1 --mixed
-        amend = commit -a --amend
+  todo = grep -iEI "TODO|FIXME|FIX"
+  who = "!sh -c 'git shortlog -s -n --all --no-merges -e'"
+  amend = commit --amend
+  next = "!svu next"
+  major = "!svu major"
+  minor = "!svu minor"
+  patch = "!svu patch"
+  current = "!svu current"
 
 [gpg]
-        program = gpg2
+  program = gpg2
 
 [pull]
-        rebase = true
+  rebase = true
 
 [filter "lfs"]
-        smudge = git-lfs smudge -- %f
-        process = git-lfs filter-process
-        required = true
-        clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
 
 [commit]
-        gpgsign = true
+  gpgsign = true
