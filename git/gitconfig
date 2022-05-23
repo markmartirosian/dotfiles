@@ -1,6 +1,6 @@
 [core]
-  excludesfile = ~/dotfiles/git/gitignore
-  attributesfile = ~/dotfiles/git/gitattributes
+  excludesfile = ~/.dotfiles/git/gitignore
+  attributesfile = ~/.dotfiles/git/gitattributes
   pager = delta
   ignorecase = false
 
@@ -31,7 +31,7 @@
   email = hello@markmartirosian.com
   signingkey = 0x8B6DD9F259DEF16A
 [init]
-  templateDir = ~/dotfiles/git/template/
+  templateDir = ~/.dotfiles/git/template/
 
 [push]
   default = simple
