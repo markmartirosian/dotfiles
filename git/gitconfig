@@ -63,11 +63,11 @@
   todo = grep -iEI "TODO|FIXME|FIX"
   who = "!sh -c 'git shortlog -s -n --all --no-merges -e'"
   amend = commit --amend
-  next = "!svu next"
-  major = "!svu major"
-  minor = "!svu minor"
-  patch = "!svu patch"
-  current = "!svu current"
+  next = "!svu --tag-mode all-branches next"
+  major = "!svu --tag-mode all-branches major"
+  minor = "!svu --tag-mode all-branches minor"
+  patch = "!svu --tag-mode all-branches patch"
+  current = "!svu --tag-mode all-branches current"
 
 [gpg]
   program = gpg2
