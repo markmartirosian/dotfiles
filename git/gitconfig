@@ -70,7 +70,7 @@
   current = "!svu --tag-mode all-branches current"
 
 [gpg]
-  program = gpg2
+  program = gpg
 
 [pull]
   rebase = true
