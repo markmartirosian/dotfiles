@@ -10,21 +10,17 @@
 [diff]
   colorMoved = default
 
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
+
 [delta]
-  features = side-by-side unobtrusive-line-numbers decorations
+  true-color = always
+  features = side-by-side gruvmax
   whitespace-error-style = 22 reverse
-  syntax-theme = 1337
   inspect-raw-lines = false
-
-[delta "unobtrusive-line-numbers"]
-  line-numbers = true
-  line-numbers-left-format = "{nm:>4} ┊"
-  line-numbers-right-format = "{np:>4} ┊"
-
-[delta "decorations"]
-  commit-decoration-style = bold yellow ul
-  file-style = bold yellow ul
-  file-decoration-style = none
 
 [user]
   name = Mark Martirosian
@@ -86,3 +82,46 @@
 
 [tag]
   gpgsign = true
+
+[delta "gruvmax"]
+    blame-code-style = syntax
+    blame-format = "{author:>18} ({commit:>8}) {timestamp:<13} "
+    blame-palette = "#000000" "#1d2021" "#282828" "#3c3836"
+    commit-decoration-style = none
+    commit-style = "#ffffff" bold
+    dark = true
+    file-added-label = [+]
+    file-copied-label = [C]
+    file-decoration-style = "#434C5E" ul
+    ; file-decoration-style = "#84786A" ul
+    file-decoration-style = none
+    file-modified-label = [M]
+    file-removed-label = [-]
+    file-renamed-label = [R]
+    file-style = 232 bold 184
+    hunk-header-style = omit
+    inline-hint-style = syntax
+    line-numbers = true
+    line-numbers-left-format = " {nm:>3} │"
+    line-numbers-left-style = black
+    line-numbers-minus-style = "#B10036"
+    line-numbers-plus-style = "#03a4ff"
+    line-numbers-right-format = " {np:>3} │"
+    line-numbers-right-style = black
+    line-numbers-zero-style = "#84786A"
+    line-numbers-zero-style = "#999999"
+    merge-conflict-begin-symbol = ⌃
+    merge-conflict-end-symbol = ⌄
+    merge-conflict-ours-diff-header-decoration-style = ''
+    merge-conflict-ours-diff-header-style = "#FABD2F" bold
+    merge-conflict-theirs-diff-header-decoration-style = ''
+    merge-conflict-theirs-diff-header-style = "#FABD2F" bold overline
+    minus-emph-style = syntax "#80002a"
+    minus-non-emph-style = syntax auto
+    minus-style = syntax black
+    plus-emph-style = syntax "#003300"
+    plus-non-emph-style = syntax auto
+    plus-style = syntax black
+    syntax-theme = gruvbox-dark
+    whitespace-error-style = "#FB4934" reverse
+    zero-style = dim syntax
