@@ -66,11 +66,10 @@
 
 [status]
   relativePaths = true
-  submoduleSummary = true
+  submoduleSummary = false
 
 [tag]
   gpgSign = true
-  sort = version:refname
 
 [transfer]
   fsckObjects = true
@@ -92,14 +91,6 @@
   email = hello@markmartirosian.com
   name = Mark Martirosian
   signingKey = 0x8B6DD9F259DEF16A
-
-[versionsort]
-  prereleaseSuffix = -beta
-  prereleaseSuffix = -pre
-  prereleaseSuffix = -rc
-  prereleaseSuffix = .beta
-  prereleaseSuffix = .pre
-  prereleaseSuffix = .rc
 
 [delta]
   features = side-by-side gruvmax
